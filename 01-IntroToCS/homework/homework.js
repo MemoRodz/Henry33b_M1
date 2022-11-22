@@ -11,18 +11,18 @@ function BinarioADecimal(num) {
 
 function DecimalABinario(num) {
    let respuesta = '';
-   const numeroBits = 3;
+   const numeroBits = 3;   //'111' ==> num.length
    const bitAbit = [0];
 
    for (let i = 0; i < numeroBits; i++) {
        let mascara = 1;
    
-       const bit = num & (mascara << i);   
+       const bit = num & (mascara << i);   // <<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
    
        if(bit === 0) {
            bitAbit[i] = 0;
        } else {
-           bitAbit[i] = 1;
+           bitAbit[i] = 1;  // bitAbit[i] = bit;
        }
    }
    
