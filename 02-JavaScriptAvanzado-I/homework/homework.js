@@ -91,8 +91,8 @@ console.log(0 || 5);
 console.log([3]+[3]-[10]);
 3>2>1; //  false
 console.log(3>2>1);
-[] ==! []; //  true
-console.log([] ==! []);
+[] == ![]; //  true
+console.log([] == ![]);
 /* 
 
 Hosting
