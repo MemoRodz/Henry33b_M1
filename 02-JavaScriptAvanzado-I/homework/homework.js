@@ -173,3 +173,36 @@ function printing() {
  printing();
  //La Funcion "setTimeout" se establece en 1,000 milisegundos para lanzar a consola 2 y en 0 milisegundos para lanzar 3 esto provoca que se lance primero el 3 antes que el 2;
  //sin embargo, se lanza a la consola 4 antes que los anteriores porque no tiene asignado ningún retraso en el proceso.
+
+ /*
+    Manejo de errores
+ */
+
+    console.log('Manejo de errores');
+
+function lastElement(array) {
+    if (array.length > 0)
+      return array[array.length - 1];
+    else
+      throw "No existe el último elemento de un arreglo vacío.";
+  }
+  
+  function lastElementPlusTen(array) {
+    return lastElement(array) + 10;
+  }
+  
+  try {
+    //print(lastElementPlusTen([]));
+    console.log(lastElementPlusTen([]));
+  }
+  catch (error) {
+    //print("Hubo un problema ", error);
+    console.log("Hubo un problema:", error);
+  }
+
+//
+try {
+    console.log(hola);
+  }catch (error) {
+    console.log("Atrapado: " + error.message);
+  }
