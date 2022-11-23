@@ -3,7 +3,7 @@ Copia del código del archivo Homework.md
 */
 
 x = 1;
-//var a = 5;
+let a = 5;
 var b = 10;
 var c = function (a, b, c) {
    var x = 10;

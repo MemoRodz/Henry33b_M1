@@ -15,7 +15,7 @@ Desde el punto de vista de _cuando_ surge el error, podemos tener:
 
 Según quien causa el error:
 * __Errores de Programación__: Es causado por un error del programador, por ejemplo: Utiliza mal una función y pasa argumentos incorrectos. Estos son los famosos `bugs`.
-* __Problemas Genuinos__: Escapa a las manos del programador y ocurren en programas que están bien codeados, por ejemplo, cunado un usuario ingresa un input que la función no esperaba o el servidor al que nos queríamos conectar está caído, etc...
+* __Problemas Genuinos__: Escapa a las manos del programador y ocurren en programas que están bien codeados, por ejemplo, cuando un usuario ingresa un input que la función no esperaba o el servidor al que nos queríamos conectar está caído, etc...
 
 Podemos intentar resolver estos problemas (o alertar que ocurren) usando algunas funciones conocidas del lenguaje, como hacer un console.log() con un mensaje, o retornar un valor extraño cuando ocurra un error (por ejemplo -1), etc... Pero todo esto sólo nos servirá para controlar algunos errores en ambientes semi controlados (yo mismo invoco las funciones que estoy armando, y voy a entender cómo manejar los errores). Para los demás errores, o cuando sucede algo extraño, queremos se frene la ejecución (o cambie de rumbo) y continuar en un lugar en donde se sepa como _manejar_ el error. Hacer esto, en varios lenguajes, es conocido como __manejo de excepciones__.
 
