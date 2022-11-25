@@ -7,25 +7,26 @@
 // // > Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
 
 
-// x = 1;
-// var a = 5;
-// var b = 10;
-// var c = function (a, b, c) {
-//    var x = 10;
-//    console.log(x); // 10 
-//    console.log(a); // 8
-//    var f = function (a, b, c) {
-//       b = a;
-//       console.log(b); // 8
-//       b = c;
-//       var x = 5;
-//    };
-//    f(a, b, c);
-//    console.log(b);//  9
-// };
-// c(8, 9, 10);
-// console.log(b); // 10 
-// console.log(x); // 1
+ // x = 1;
+ // var a = 5;
+ // var b = 10;
+ // var c = function (a, b, c) {
+ //    var x = 10;
+ //    console.log(x); // 10 
+ //    console.log(a); // 8
+ //    var f = function (a, b, c) {
+ //       b = a;
+ //       console.log(b); // 8
+ //       b = c;
+ //       var x = 5;
+ //    };
+ //    f(a, b, c);
+ //    console.log(b);//  9
+ // };
+ // c(8, 9, 10);
+ // console.log(c(8, 9, 10));
+ // console.log(b); // 10 
+ // console.log(x); // 1
 
 
 
@@ -119,17 +120,17 @@
 // // Y el de este código? :
 
 
-var snack = 'Meow Mix';
-
-function getFood(food) {
-   if (food) {
-      let snack = 'Friskies';
-      return snack;
-   }
-   return snack;
-}
-
-console.log(getFood(false)); // Meow Mix
+// var snack = 'Meow Mix';
+// 
+// function getFood(food) {
+//    if (food) {
+//       let snack = 'Friskies';
+//       return snack;
+//    }
+//    return snack;
+// }
+// 
+// console.log(getFood(false)); // Meow Mix
 
 
 // // ### This
@@ -159,16 +160,16 @@ console.log(getFood(false)); // Meow Mix
 // // Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra por consola? ¿Por qué?
 
 
-function printing() {
-   console.log(1);
-   setTimeout(function () {
-      console.log(2);
-   }, 2000);
-   setTimeout(function () {
-      console.log(3);
-   }, 0);
-   console.log(4);
-}
-
-printing();
+// function printing() {
+//    console.log(1);
+//    setTimeout(function () {
+//       console.log(2);
+//    }, 2000);
+//    setTimeout(function () {
+//       console.log(3);
+//    }, 0);
+//    console.log(4);
+// }
+// 
+// printing();
 
