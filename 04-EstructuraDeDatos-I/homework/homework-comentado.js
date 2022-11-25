@@ -1,4 +1,5 @@
-'use strict';
+'use strict'
+
 /*
 Definir las funciones recursivas nFactorial y nFibonacci.
 
@@ -13,63 +14,30 @@ Secuencia:  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 Como ejercicio adicional y completamente opcional, al terminar de resolver este problema pueden intentar definir funciones que logren los mismos resultados pero de manera iterativa.
 */
 
-// EJERCICIO 1
 function nFactorial(n) {
-   
-      if (n === 0)
-      {
-         return 1;
-      }
-      else if (n <= 0)
-      {
-         return 'El número tiene que ser entero positivo.'
-      }
-      else 
-      {
-         return n * nFactorial(n-1);
-      }
 }
 
-
-// EJERCICIO 2
 function nFibonacci(n) {
-   if( n < 2) return n;
-
-   return nFibonacci(n - 1) + nFibonacci(n -2);
 }
 
 /*
-Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, 
-donde el primer elemento que ingresa es el primero que se quita. 
-Definir los siguientes métodos:
+Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde el primer elemento que ingresa es el primero que se quita. Definir los siguientes métodos:
   - enqueue: agrega un valor respetando el orden.
-  - dequeue: remueve un valor respetando el orden. 
-             Retorna undefined cuando la queue está vacía.
+  - dequeue: remueve un valor respetando el orden. Retorna undefined cuando la queue está vacía.
   - size: retorna el tamaño (cantidad de elementos) de la queue.
 
 Pueden utilizar class o función constructora.
 */
 
-// EJERCICIO 3
 function Queue() {
-   this.arreglo_pila = [];
-   this.enqueue = function(valor){
-      this.arreglo_pila.push(valor);
-   };
-   this.dequeue = function(){
-      return this.arreglo_pila.shift();
-   };
-   this.size = function(){
-      return this.arreglo_pila.length;
-   };
-   
+
 }
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
 module.exports = {
-   Queue,
-   nFactorial,
-   nFibonacci,
+  Queue,
+  nFactorial,
+  nFibonacci
 };
