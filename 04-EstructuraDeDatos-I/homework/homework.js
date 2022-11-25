@@ -62,7 +62,12 @@ function Queue() {
    this.size = function(){
       return this.arreglo_pila.length;
    };
+   /*
+   URL's de consulta para ideas de resolución:
+   https://parzibyte.me/blog/2019/08/13/javascript-eliminar-elemento-arreglo/
+   https://www.youtube.com/watch?v=bc1V6XFpUlY&t=76s
    
+   */
 }
 
 // No modifiquen nada debajo de esta linea
