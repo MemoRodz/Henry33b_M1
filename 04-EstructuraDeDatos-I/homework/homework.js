@@ -53,6 +53,9 @@ Pueden utilizar class o función constructora.
 // EJERCICIO 3
 function Queue() {
    this.arreglo_pila = [];
+   /*
+   Con funciones internas:
+
    this.enqueue = function(valor){
       this.arreglo_pila.push(valor);
    };
@@ -62,6 +65,7 @@ function Queue() {
    this.size = function(){
       return this.arreglo_pila.length;
    };
+   */
    /*
    URL's de consulta para ideas de resolución:
    https://parzibyte.me/blog/2019/08/13/javascript-eliminar-elemento-arreglo/
@@ -69,7 +73,22 @@ function Queue() {
    
    */
 }
+// Funciones externas creadas en el PROTOTIPO
+Queue.prototype.enqueue = function(valor) {this.arreglo_pila.push(valor);};
+Queue.prototype.dequeue = function() {return this.arreglo_pila.shift();};
+Queue.prototype.size = function() {return this.arreglo_pila.length;};
+const instanciaDeQueue = new Queue();
 
+// Revisión en Consola
+console.log(nFactorial(3));
+console.log(nFibonacci(3));
+console.log(Queue);
+console.log(instanciaDeQueue);
+console.log(instanciaDeQueue.enqueue({a:3}));
+console.log(instanciaDeQueue.enqueue({b:3}));
+console.log(instanciaDeQueue.dequeue());
+console.log(instanciaDeQueue.size());
+//console.log(Queue.enqueue('first in line'));
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
