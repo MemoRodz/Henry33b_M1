@@ -39,7 +39,7 @@ class BinarySearchTree {
    };
 
    insert(value){
-      if(value > this.value)
+      if(value >= this.value) //Tu lo tenías ">" en Code Review se modificó
       {
          if(!this.right)
          {
@@ -92,12 +92,43 @@ class BinarySearchTree {
       }
    };
 
-   depthFirstForEach(){
-
+   depthFirstForEach(cb, order){
+      //in-order
+      if(!order || order === 'in-order')
+      {
+         this.left && this.left.depthFirstForEach(cb, order)
+         cb(this.value)
+         this.right && this.right.depthFirstForEach(cb, order)
+      } else if(order === 'post-order')
+      {
+         // post order
+         this.left && this.left.depthFirstForEach(cb, order)
+         this.right && this.right.depthFirstForEach(cb, order)
+         cb(this.value)
+      }
+      else
+      {
+         //Pre-order
+         cb(this.value)
+         this.left && this.left.depthFirstForEach(cb, order)
+         this.right && this.right.depthFirstForEach(cb, order)
+      }
    };
 
-   breadthFirstForEach(){
-
+   breadthFirstForEach(cb, array_queue = []){
+      if(this.left)
+      {
+         array_queue.push(this.left)
+      }
+      if(this.right)
+      {
+         array_queue.push(this.right)
+      }
+      cb(this.value)
+      if(array_queue.length > 0)
+      {
+         array_queue.shift().breadthFirstForEach(cb,array_queue)
+      }
    };
 
 
