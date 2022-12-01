@@ -46,10 +46,10 @@ function insertionSort(array) {
   // el array recibido como parámetro utilizando arreglos
   // Devolver el array ordenado resultante
   // Tu código:
-  const l = array.length;
+
   let j, temp;
 
-  for ( let i = 1; i < l; i++ ) {
+  for ( let i = 1; i < array.length; i++ ) {
     j = i;
     temp = array[ i ];
     while ( j > 0 && array[ j - 1 ] > temp ) {
