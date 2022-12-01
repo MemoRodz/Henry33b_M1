@@ -6,7 +6,11 @@ function quickSort(array) {
   // el array recibido como parámetro
   // Devolver el array ordenado resultante
   // Tu código:
-
+  //Referencias:
+  //https://bitcu.co/algoritmo-de-ordenamiento-quicksort/
+  //https://hdeleon.net/algoritmo-de-ordenamiento-quicksort-en-javascript-animado-con-jquery/
+  //Importancia de la elección del pivote:
+  //https://es.slideshare.net/PatriciaCorrea6/metodo-quicksort
   if (array.length < 1) {
     return array;
   }
@@ -26,6 +30,9 @@ function quickSort(array) {
   }
   return quickSort(left).concat(equals).concat(quickSort(right));
 }
+
+//https://adrorodri.blogspot.com/2012/09/metodo-de-ordenacion-merge-sort.html
+//https://vincentblog.xyz/posts/como-ordenar-arrays-en-javascript-con-merge
 
 function merge(left, right) {
   var result = [],
